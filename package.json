@@ -11,19 +11,18 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "clean": "turbo run clean",
+    "purge": "bash scripts/purge.sh",
     "test": "turbo run test",
     "docs:dev": "turbo run docs:dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "update-core": "git submodule update --remote packages/eliza-core",
-    "update-stable": "cd packages/eliza-stable && git fetch origin --tags && git checkout v0.0.10",
-    "postinstall": "pnpm install --include=optional sharp"
+    "update-stable": "cd packages/eliza-stable && git fetch origin --tags && git checkout v0.0.10"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
     "prettier": "^3.1.1",
-    "turbo": "^1.11.3",
-    "typescript": "^5.3.3",
-    "sharp": "^0.33.5"
+    "turbo": "^2.1.2",
+    "typescript": "^5.3.3"
   },
   "packageManager": "pnpm@8.9.0",
   "engines": {
