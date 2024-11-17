@@ -1,0 +1,21 @@
+{
+    "name": "@workspace/eliza-custom",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+      "build": "tsc",
+      "dev": "ts-node src/index.ts",
+      "clean": "rm -rf dist",
+      "lint": "eslint src/**/*.ts"
+    },
+    "dependencies": {
+      "@ai16z/core": "0.0.10",
+      "@ai16z/agent": "0.0.10",
+      "@ai16z/adapters": "0.0.10"
+    },
+    "devDependencies": {
+      "@types/node": "^20.11.0",
+      "ts-node": "^10.9.2",
+      "typescript": "^5.3.3"
+    }
+  }
