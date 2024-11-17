@@ -1,13 +1,13 @@
 {
-    "compilerOptions": {
-      "target": "ES2022",
-      "module": "NodeNext",
-      "moduleResolution": "NodeNext",
-      "esModuleInterop": true,
-      "strict": true,
-      "outDir": "./dist",
-      "rootDir": "./src"
-    },
-    "include": ["src"],
-    "exclude": ["node_modules"]
-  }
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": ["src/**/*"],
+  "references": [
+    { "path": "../eliza-core/packages/core" },
+    { "path": "../eliza-core/packages/agent" },
+    { "path": "../eliza-core/packages/adapters" }
+  ]
+}

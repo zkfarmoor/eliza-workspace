@@ -1,21 +1,29 @@
 {
-    "name": "@workspace/eliza-custom",
-    "version": "0.0.1",
-    "private": true,
-    "scripts": {
-      "build": "tsc",
-      "dev": "ts-node src/index.ts",
-      "clean": "rm -rf dist",
-      "lint": "eslint src/**/*.ts"
-    },
-    "dependencies": {
-      "@ai16z/core": "0.0.10",
-      "@ai16z/agent": "0.0.10",
-      "@ai16z/adapters": "0.0.10"
-    },
-    "devDependencies": {
-      "@types/node": "^20.11.0",
-      "ts-node": "^10.9.2",
-      "typescript": "^5.3.3"
-    }
+  "name": "@workspace/eliza-custom",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts"
+  },
+  "dependencies": {
+    "eliza": "workspace:*",
+    "better-sqlite3": "^9.0.0",
+    "sqlite-vss": "^0.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/better-sqlite3": "^7.6.9",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.11",
+    "eslint": "^9.13.0",
+    "ts-node": "^10.9.2"
   }
+}

@@ -1,6 +1,6 @@
 [submodule "packages/eliza-core"]
 	path = packages/eliza-core
 	url = https://github.com/ai16z/eliza.git
-[submodule "packages/packages/eliza-stable"]
-	path = packages/packages/eliza-stable
+[submodule "packages/eliza-stable"]
+	path = packages/eliza-stable
 	url = https://github.com/ai16z/eliza.git

@@ -1,17 +1,16 @@
-import { AgentRuntime } from "@ai16z/core";
-import { SqliteDatabaseAdapter } from "@ai16z/adapters";
+import { AgentRuntime, SqliteDatabaseAdapter } from "eliza";
 import Database from "better-sqlite3";
 
-async function main() {
-  const db = new SqliteDatabaseAdapter(new Database("./dev.db"));
+export async function createCustomAgent() {
+  const db = new SqliteDatabaseAdapter(new Database(":memory:"));
   
   const runtime = new AgentRuntime({
+    serverUrl: process.env.X_SERVER_URL || "",
+    token: process.env.OPENAI_API_KEY || "",
     databaseAdapter: db,
-    modelProvider: "OPENAI",
-    character: require("./character.json")
+    model: process.env.XAI_MODEL || "meta-llama/Llama-3.1-7b-instruct",
+    embeddingModel: "text-embedding-3-small"
   });
 
-  await runtime.start();
+  return runtime;
 }
-
-main().catch(console.error);
