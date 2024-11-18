@@ -16,11 +16,13 @@
     "test": "turbo run test",
     "docs:dev": "turbo run docs:dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "update-core": "git submodule update --remote packages/eliza-core",
-    "update-stable": "cd packages/eliza-stable && git fetch origin --tags && git checkout v0.0.10",
+    "update-core": "bash scripts/update-core.sh && bash scripts/configure-packages.sh",
+    "update-stable": "bash scripts/update-stable.sh && bash scripts/configure-packages.sh",
+    "configure-packages": "bash scripts/configure-packages.sh",
     "playwright:install": "bash scripts/playwright.sh",
     "examples": "turbo run example",
     "examples:build": "turbo run build --filter=./packages/examples/*"
+    
   },
   "devDependencies": {
     "@types/node": "^20.11.0",

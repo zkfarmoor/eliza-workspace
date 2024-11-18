@@ -11,7 +11,7 @@ This is a monorepo for the Eliza project. It is built with Turborepo and pnpm.
 
 ## TODO
 
-- [ ] Ensure we properly handle the imported packages (eliza-core and eliza-stable) for pulling current versions while keeping any necessary dependencies for building our turborepo. (we added type-doc and tsup to the `packages/eliza-stable/` root `package.json` file, and added a `tsup.config.ts` file to the `package.json` file in `packages/eliza-stable/core/`)
+- [ ] Ensure we properly handle the imported packages (eliza-core and eliza-stable) for pulling current versions while still properly building our turborepo. We can use custom `update-core.sh` and `update-stable.sh` scripts to pull latest versions and then make the necessary changes to successfully build. (To successfuly build, we added type-doc and tsup to the `packages/eliza-stable/` root `package.json` file, added a `tsup.config.ts` file to the `package.json` file in `packages/eliza-stable/core/`, changed the `package.json` files in `eliza-core/packages/plugin-node/` and `eliza-stable/core/` to update the postinstall script to run `playwright:install` instead of `postinstall`)
 - [ ] Clean up/fix the `docs/src/dev/lifi/` docs.
 - [ ] Update our `.cursorrules` file to make it specific for this Turborepo.
 - [ ] Resolve the pnpm.overrides warning and other packages/eliza-core warnings.
