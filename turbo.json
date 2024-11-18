@@ -6,20 +6,24 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     },
-    "lint": {},
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "example": {
+      "dependsOn": ["build"],
+      "cache": false,
+      "outputs": []
+    },
+    "lint": {
+      "outputs": []
     },
     "clean": {
       "cache": false
     },
     "test": {
       "dependsOn": ["build"],
-      "outputs": []
-    },
-    "docs": {
-      "outputs": ["docs/**"]
+      "outputs": ["coverage/**"]
     }
   }
 }

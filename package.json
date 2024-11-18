@@ -18,7 +18,9 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "update-core": "git submodule update --remote packages/eliza-core",
     "update-stable": "cd packages/eliza-stable && git fetch origin --tags && git checkout v0.0.10",
-    "playwright:install": "bash scripts/playwright.sh"
+    "playwright:install": "bash scripts/playwright.sh",
+    "examples": "turbo run example",
+    "examples:build": "turbo run build --filter=./packages/examples/*"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
