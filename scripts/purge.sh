@@ -8,3 +8,5 @@ rm -rf docs/node_modules
 rm -rf packages/*/packages/*/node_modules
 rm -rf packages/*/docs/node_modules
 rm -rf pnpm-lock.yaml
+rm -rf packages/examples/node_modules
+rm -rf packages/examples/*/node_modules

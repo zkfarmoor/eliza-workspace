@@ -2,6 +2,9 @@
   "name": "@workspace/examples",
   "version": "0.0.1",
   "private": true,
+  "workspaces": [
+    "lifi-sdk"
+  ],
   "scripts": {
     "build": "turbo run build --filter=\"@workspace/example-*\"",
     "clean": "turbo run clean --filter=\"@workspace/example-*\"",
