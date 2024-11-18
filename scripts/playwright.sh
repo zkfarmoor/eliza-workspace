@@ -1,4 +1,5 @@
 #!/bin/bash
 
-sudo pnpm --filter "@workspace/eliza-core" setup-playwright
-sudo pnpm --filter "@workspace/eliza-stable" setup-playwright
+sudo pnpm --filter "@workspace/eliza-core" playwright:install
+sudo pnpm --filter "@workspace/eliza-stable" playwright:install
+sudo pnpm --filter "@workspace/eliza-core/packages/plugin-node" playwright:install

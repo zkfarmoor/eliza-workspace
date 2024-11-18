@@ -1,13 +1,19 @@
 {
-  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./src"
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "declaration": true,
+    "baseUrl": ".",
+    "paths": {
+      "eliza": ["../eliza-stable/core/src"]
+    }
   },
   "include": ["src/**/*"],
-  "references": [
-    { "path": "../eliza-core/packages/core" },
-    { "path": "../eliza-core/packages/agent" },
-    { "path": "../eliza-core/packages/adapters" }
-  ]
+  "exclude": ["node_modules", "dist"]
 }

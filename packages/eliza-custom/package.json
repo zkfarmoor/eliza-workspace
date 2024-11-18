@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "main": "./dist/index.js",
+  "type": "module",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "tsup src/index.ts --format esm --dts --external '@workspace/eliza-stable'",
+    "dev": "tsup src/index.ts --watch",
     "clean": "rm -rf dist",
     "test": "jest",
     "lint": "eslint src/**/*.ts"

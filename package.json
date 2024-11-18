@@ -12,11 +12,13 @@
     "lint": "turbo run lint",
     "clean": "turbo run clean",
     "purge": "bash scripts/purge.sh",
+    "rebuild": "bash scripts/rebuild.sh",
     "test": "turbo run test",
     "docs:dev": "turbo run docs:dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "update-core": "git submodule update --remote packages/eliza-core",
-    "update-stable": "cd packages/eliza-stable && git fetch origin --tags && git checkout v0.0.10"
+    "update-stable": "cd packages/eliza-stable && git fetch origin --tags && git checkout v0.0.10",
+    "playwright:install": "bash scripts/playwright.sh"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
